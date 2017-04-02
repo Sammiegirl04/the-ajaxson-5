@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
     <title>The AJAXson 5</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="jax.js"></script>
@@ -8,19 +11,28 @@
 
 </head>
 <body>
+  <header class="jumbotron">
     <h1>The AJAXson 5</h1>
+  </header>
+  <form id="form-gif-request" />
+    <div class="col-md-6">
+      <label>Let's see those Jacksons!</label>
+      <div class="input-group">
+        <span class="input-group-addon">What kind of Jackson 5 gif are you looking for?</span>
+        <input type="text" class="form-control" placeholder="ie. dance"/>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label>Prove you are not a robot by answering this riddle:</label>
+      <div class="input-group">
+        <input id="captcha" type="text" class="form-control" placeholder="How many..."/>
+        <span class="input-group-addon">Jacksons are better than one!</span>
+      </div>
+    </div>
+    <br>
+    <br>
+    <input type="submit" value="Get my Gif!" />
 
-    <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <br>
-
-        <label>Prove you are not a robot by answering this riddle:</label>
-        <input id="captcha" type="text"/>
-        <label>Jacksons are better than one</label>
-		<br>
-
-        <input type="submit" value="Get my Gif!" />
     </form>
 
     <img id="gif" src="" hidden="true"/>
